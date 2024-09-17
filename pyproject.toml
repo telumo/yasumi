@@ -1,0 +1,25 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "yasumi"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+authors = [
+    { name="telumo", email="drumscohika@gmail.com" },
+]
+description = "Yasumi is a library for calculating the dates of Japanese holidays."
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/telumo/yasumi"
+Issues = "https://github.com/telumo/yasumi/issues"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]

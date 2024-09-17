@@ -1,0 +1,20 @@
+[package]
+name = "yasumi-py"
+version = "0.1.0"
+edition = "2021"
+authors = ["telumo"]
+repository = "https://github.com/telumo/yasumi"
+license = "MIT"
+license-file = "LICENSE"
+description = "Yasumi is a library for calculating the dates of Japanese holidays."
+include = ["*.pyi", "src/*"]
+exclude = ["test/*", ".gitignore", ".github", ".vscode"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+chrono = "0.4.38"
+pyo3 = "0.22.3"
+yasumi = "0.2.1"
